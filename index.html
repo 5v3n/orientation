@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	</head>
+	<script>
+	window.addEventListener("deviceorientation",  lagebestimmung, false);
+	function lagebestimmung(ereignis) {
+    var winkel_alpha = ereignis.alpha;
+    var winkel_beta = ereignis.beta;
+    var winkel_gamma = ereignis.gamma;
+  }
+  function lagebestimmung(ereignis) {
+    var winkel_beta = Math.round(ereignis.beta);
+    var winkel_gamma = Math.round(ereignis.gamma);
+    document.getElementById("logo").style.webkitTransform = "rotate(" + winkel_gamma + "deg) rotate3d(1, 0, 0, " + winkel_beta + "deg)";
+  }
+	</script>
+	<body>
+  <img id="logo" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+	</body>
+
+</html>
