@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
 <html>
-
-	<head>
-	</head>
-	<script>
-	window.addEventListener("deviceorientation",  lagebestimmung, false);
-	function lagebestimmung(ereignis) {
+  <head>
+  </head>
+  <script>
+  window.addEventListener("deviceorientation",  lagebestimmung, false);
+  function lagebestimmung(ereignis) {
     var winkel_alpha = ereignis.alpha;
     var winkel_beta = ereignis.beta;
     var winkel_gamma = ereignis.gamma;
@@ -14,12 +13,26 @@
   function lagebestimmung(ereignis) {
     var winkel_beta = Math.round(ereignis.beta);
     var winkel_gamma = Math.round(ereignis.gamma);
-    document.getElementById("logo").style.webkitTransform = "rotate(" + winkel_gamma*-1 + "deg) rotate3d(1, 0, 0, " + winkel_beta + "deg)";
+    document.getElementById("logo").style.webkitTransform = "rotate(" + -1.0*winkel_gamma + "deg) rotate3d(1, 0, 0, " + winkel_beta + "deg)";
   }
-	</script>
-	<body>
-  <img id="logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
-	
-	</body>
-
+  </script>
+  <style>
+    a, a:hover, a:visited {
+      font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Droid, sans-serif;
+      color: #494949;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 75px;
+    }
+  </style>
+  <body>
+    <content>
+      <img id="logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+    </content>
+    <footer>
+      <a href="https://github.com/5v3n/orientation">use the source, luke!</a>
+    </footer>
+  </body>
 </html>
