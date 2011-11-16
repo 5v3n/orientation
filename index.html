@@ -14,11 +14,12 @@
   function lagebestimmung(ereignis) {
     var winkel_beta = Math.round(ereignis.beta);
     var winkel_gamma = Math.round(ereignis.gamma);
-    document.getElementById("logo").style.webkitTransform = "rotate(" + winkel_gamma + "deg) rotate3d(1, 0, 0, " + winkel_beta + "deg)";
+    document.getElementById("logo").style.webkitTransform = "rotate(" + winkel_gamma*-1 + "deg) rotate3d(1, 0, 0, " + winkel_beta + "deg)";
   }
 	</script>
 	<body>
-  <img id="logo" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+  <img id="logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+	
 	</body>
 
 </html>
